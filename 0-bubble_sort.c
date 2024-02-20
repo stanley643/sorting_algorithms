@@ -7,22 +7,24 @@
  * Return: 0
  */
 
-vord bubble_sort(int *array, size_t size)
+void bubble_sort(int *array, size_t size)
 {
-	int step;
+	size_t step;
 	int temp;
-	int i;
+	size_t i;
 
 	for (step = 0; step < size - 1; ++step)
 	{
-		for(i = 0; i < size - step - 1; ++1)
+		for(i = 0; i < size - step - 1; ++i)
 		{
 			if(array[i] > array[i + 1])
 			{
 				temp = array[i];
 				array[i] = array[i + 1];
 				array[i + 1] = temp;
+				print_array(array, size);
 			}
 		}
+		
 	}
 }
